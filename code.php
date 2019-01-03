@@ -76,7 +76,7 @@ class Code {
 		// usual suspects for binary search
 		$low       = $round(1, $precision);
 		$mid       = $midPoint($n);
-		$high      = $n;
+		$high      = $round($n, $precision);
 		$value     = 0;
 		while ($low <= $high) { 
 			$mid = $midPoint($low+$high);
