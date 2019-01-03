@@ -67,7 +67,6 @@ class Code {
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
 	static function squareRoot($n) {
-		// constants
 		$margin    = sprintf('%.3f', .001);
 		$precision = strlen(strval("" . $margin)) - strrpos($margin, '.') - 1;
 		// anonymous helper functions
@@ -77,10 +76,8 @@ class Code {
 		// usual suspects for binary search
 		$low       = $round(1, $precision);
 		$mid       = $midPoint($n);
-		// deep copies
 		$high      = $n;
 		$value     = 0;
-		// print("when n = " . $n . "\n... low:  " . $low . "\n... mid:  " . $mid . "\n... high: " . $high . "\n");
 		while ($low <= $high) { 
 			$mid = $midPoint($low+$high);
 			if ($n === $squared($round($mid, 0))) { 
