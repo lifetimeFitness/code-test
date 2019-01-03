@@ -7,25 +7,15 @@ var code = {
 
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
 	capitalizeEveryNthWord: function(sentence, offset, n) {
-		// constants
-		const originalWords = sentence.split(' ');
-		// function variable(s)
-		let adjustedWords   = [];	
+		let  words          = sentence.split(' ');
 		// anonymous function(s)
 		let titleWord       = function (word) { return word.charAt(0).toUpperCase() + word.slice(1) }
-		for(let i = 0; i < originalWords.length; ++i){
-			let adjustedWord = originalWords[i];
-			if(offset == 0){
-				if( i % n == 0 ){
-					adjustedWord = titleWord(originalWords[i]);	
-				}
+		for(let i = 0; i < words.length; ++i){
+			if(i >= offset && i % n == 0 ){
+				words[i] = titleWord(words[i]);	
 			}
-			else if(offset > 0){
-				--offset;
-			}
-			adjustedWords.push(adjustedWord);
 		}
-		return adjustedWords.join(" ");
+		return words.join(" ");	},
 		
 	},
 	
