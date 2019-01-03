@@ -48,7 +48,7 @@ object Code {
 	// "TAIL CALL" RECURSION (ACM CONFERENCE, STEELE 1977)
 	//  CALCULATES "PISANO PERIOD" (WALL 1960), (WRENCH 1969)
 	def fibonacci(n:Integer) : Integer = {
-	    def tail_recursion(n:Int, previous:Int, current:Int): Int = n match {
+		def tail_recursion(n:Int, previous:Int, current:Int): Int = n match {
 			case 0 => previous
 			case _ => tail_recursion(n-1, current, ((previous+current) % 1000000))
 		}
