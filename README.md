@@ -6,4 +6,4 @@
 - No F#
 ### Non-Required Edits
 - tests.php array searching
-- Tests.java "fibionacci to fibonacci"
+- Tests.java "fibionacci" to "fibonacci"
