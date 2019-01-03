@@ -1,8 +1,4 @@
 <?php
-define('ROOT5', sqrt(5));
-define('PHI', (1+ROOT5)/2);
-define('TAU', pi()*2);
-define('tPHI', -(1/PHI));
 class Code {
 	// Returns "Hello World!"
 	static function helloWorld() {

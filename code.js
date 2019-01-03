@@ -76,10 +76,9 @@ var code = {
 	// Do not use the built-in square root function.
 	// Also not using return Math.pow(x, .5) or its equivalent x**.5
 	squareRoot: function(n) {
-
-		let start = n;
-		let marginOfError = .00001;
-		while((start - n/start) > marginOfError){
+		let  start = n;
+		let margin = .00001;
+		while((start - n/start) > margin){
 			start = (start + (n/start))/2;
 		}
 		return +(start.toFixed(4));
