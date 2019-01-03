@@ -1,7 +1,7 @@
 var code = {
 	// Returns "Hello World!"
 	helloWorld: function() {
-	    return "Hello World!";
+		return "Hello World!";
 	},
 
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
