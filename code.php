@@ -81,7 +81,7 @@ class Code {
 		// anonymous helper functions
 		$midPoint  = function($a)    { return number_format((float) ($a/2), 0, '.', ''); };
 		$round     = function($a, $p){ return number_format((float) $a    , $p,'.', ''); };
-		$squared   = function($a)    { return ($a**2);  };
+		$squared   = function($a)    { return ($a*$a);  };
 		// usual suspects for binary search
 		$low       = $round(1, $precision);
 		$mid       = $midPoint($n);
