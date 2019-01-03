@@ -1,8 +1,7 @@
 var code = {
 	// Returns "Hello World!"
 	helloWorld: function() {
-		let response = "Hello World!";
-	    return response;
+	    return "Hello World!";
 	},
 
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
@@ -22,7 +21,6 @@ var code = {
 	isPrime: function(n) {
 		// quick evaluation of the truth tucked into a boolean
 		let prime = n != 1 && n > 0;
-		// anonymous function
 		let round = function(a){ return +(a.toFixed(0));}
 		for (let i=2; i <= round(this.squareRoot(n)); ++i){
 			if(n % i == 0) {
