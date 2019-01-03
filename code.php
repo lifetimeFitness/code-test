@@ -7,23 +7,15 @@ class Code {
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
 	static function capitalizeEveryNthWord($sentence, $offset, $n) {
 		// ucfirst(strtolower($everyWordInSentence)) is intentionally avoided
-		$adjustedWords = array();
-		$delimiter     = " ";
-		$originalWords = explode($delimiter, $sentence);
-		$titleWord     = function ($word) { return strtoupper(substr($word, 0, 1)) . substr($word, 1, strlen($word)-1); };
-		for($i = 0; $i < count($originalWords); $i++){
-			$adjustedWord = $originalWords[$i];
-			if($offset == 0){
-				if( $i % $n == 0 ){
-					$adjustedWord = $titleWord($originalWords[$i]);	
-				}
+		$delimiter  = " ";
+		$words      = explode($delimiter, $sentence);
+		$titleWord  = function ($word) { return strtoupper(substr($word, 0, 1)) . substr($word, 1, strlen($word)-1); };
+		for($i = 0; $i < count($words); $i++){
+			if($i >= $offset && $i % $n == 0 ){
+				$words[$i] = $titleWord($words[$i]);	
 			}
-			else if($offset > 0){
-				--$offset;
-			}
-			array_push($adjustedWords, $adjustedWord);
 		}
-		return implode($delimiter, $adjustedWords);
+		return implode($delimiter, $words);
 	}
 	
 	// Determine if a number is prime
