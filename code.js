@@ -7,9 +7,8 @@ var code = {
 
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
 	capitalizeEveryNthWord: function(sentence, offset, n) {
-		let  words          = sentence.split(' ');
-		// anonymous function(s)
-		let titleWord       = function (word) { return word.charAt(0).toUpperCase() + word.slice(1) }
+		let     words = sentence.split(' ');
+		let titleWord = function (word) { return word.charAt(0).toUpperCase() + word.slice(1) }
 		for(let i = 0; i < words.length; ++i){
 			if(i >= offset && i % n == 0 ){
 				words[i] = titleWord(words[i]);	
