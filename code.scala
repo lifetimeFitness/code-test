@@ -7,7 +7,7 @@ object Code {
 	// Take a single-spaced <sentence>, and capitalize every <n> word starting with <offset>.
 	def capitalizeEveryNthWord(sentence:String, offset:Integer, n:Integer) : String = {
 		var delimiter     = " ";
-	    var originalWords = sentence.split(delimiter);
+		var originalWords = sentence.split(delimiter);
 		var adjustedWords = new Array[String](originalWords.length);
 		for(i <- originalWords.indices){
 			val characters   = originalWords(i).toCharArray();
