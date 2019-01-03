@@ -66,8 +66,9 @@ class Code {
 	// Give the square root of a number
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
+	// A MUCH MORE INVOLVED BINARY-SEARCH W/ANONYMOUS FUNCTIONS
 	static function squareRoot($n) {
-		$margin    = sprintf('%.3f', .001);
+		$margin    = sprintf('%.3f', .0001);
 		$precision = strlen(strval("" . $margin)) - strrpos($margin, '.') - 1;
 		// anonymous helper functions
 		$midPoint  = function($a)    { return number_format((float) ($a/2), 0, '.', ''); };
