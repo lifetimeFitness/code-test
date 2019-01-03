@@ -68,7 +68,7 @@ var code = {
 		while((start - n/start) > margin){
 			start = (start + (n/start))/2;
 		}
-		return +(start.toFixed(4));
+		return +(start.toFixed(3));
 	}
 };
 module.exports = code;
