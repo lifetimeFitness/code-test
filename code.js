@@ -13,10 +13,9 @@ var code = {
 				words[i] = titleWord(words[i]);	
 			}
 		}
-		return words.join(" ");	},
+		return words.join(" ");
 		
 	},
-	
 	// Determine if a number is prime
 	isPrime: function(n) {
 		// quick evaluation of the truth tucked into a boolean
