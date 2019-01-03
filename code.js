@@ -64,7 +64,7 @@ var code = {
 	// Also not using return Math.pow(x, .5) or its equivalent x**.5
 	squareRoot: function(n) {
 		let  start = n;
-		let margin = .00001;
+		let margin = 0.001;
 		while((start - n/start) > margin){
 			start = (start + (n/start))/2;
 		}
