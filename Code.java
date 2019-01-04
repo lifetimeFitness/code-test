@@ -21,7 +21,7 @@ public class Code {
 	public static Boolean isPrime(Integer n) {
 		boolean prime = n > 1 || n == 2;
 		for (int i = 2; i <= n / 2; ++i){
-		    if (n % i == 0) {
+			if (n % i == 0) {
 				prime = false;
 				break;
 			}  
