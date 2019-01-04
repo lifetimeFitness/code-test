@@ -38,7 +38,7 @@ class Code {
 	// If you continue this process, the result will trend towards the golden ratio.
 	// BASIC RECURSIVE GOLDEN RATIO THEOREM
 	static function goldenRatio($a, $b) {
-		return (($a/$b) == ($a+$b)/$a) ? ($a+$b)/$a: Code::goldenRatio(($a+$b), $a);
+		return (($a/$b) == ($a+$b)/$a) ? ($a+$b)/$a: self::goldenRatio(($a+$b), $a);
 	}
 
 	// Give the nth Fibonacci number
@@ -53,13 +53,13 @@ class Code {
 		}
 		else if($n % 2 == 0){
 			$half  = $n/2;
-			$f1    = Code::fibonacci($half);
-			$f2    = Code::fibonacci($half-1);
+			$f1    = self::fibonacci($half);
+			$f2    = self::fibonacci($half-1);
 			return $f1*($f1+(2*$f2));
 		}
 		$nHalf = ($n-1) / 2;
-		$f1    = Code::fibonacci($nHalf+1);
-		$f2    = Code::fibonacci($nHalf);
+		$f1    = self::fibonacci($nHalf+1);
+		$f2    = self::fibonacci($nHalf);
 		return ($f1*$f1) + ($f2*$f2);
 	}
 
