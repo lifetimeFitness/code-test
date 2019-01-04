@@ -1,5 +1,5 @@
 object Code {
-	val EPSILON = .00001;
+	val EPSILON: Double = .00001;
 
 	// Returns "Hello World!"
 	def helloWorld() : String = {
@@ -8,10 +8,10 @@ object Code {
 
 	// Take a single-spaced <sentence>, and capitalize every <n> word starting with <offset>.
 	def capitalizeEveryNthWord(sentence:String, offset:Integer, n:Integer) : String = {
-		var delimiter = " ";
-	    var words     = sentence.split(delimiter);
+		var delimiter: String = " ";
+		var     words: Array[String] = sentence.split(delimiter);
 		for(i <- words.indices){
-			val characters   = words(i).toCharArray();
+			val characters: Array[Char] = words(i).toCharArray();
 			if(i >= offset && i % n == 0){
 				characters(0) = Character.toUpperCase(characters(0));
 			}
@@ -64,7 +64,7 @@ object Code {
 		var       low: Double = 1.0;
 		var      high: Double = n;
 		while(high-low >= 0) {
-			var mid = (low+high)/2;
+			var mid: Double = (low+high)/2;
 			if (((mid*mid)-n) > 0){
 				high = mid-EPSILON;
 			}
