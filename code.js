@@ -64,8 +64,8 @@ var code = {
 	// Also not using return Math.pow(x, .5) or its equivalent x**.5
 	// ALMOST TEXTBOOK BINARY SEARCH W/ SOME HARD CODED NUMBERS
 	squareRoot: function(n) {
-		let low = 1.0;
-		let high = n;
+		let low    = 1.0;
+		let high   = n;
 		let margin = .0001;
 		while(high-low >= 0) {
 			let mid = (low+high)/2;
