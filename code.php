@@ -66,21 +66,21 @@ class Code {
 	// Give the square root of a number
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
-	// A MUCH MORE INVOLVED BINARY-SEARCH W/ANONYMOUS FUNCTIONS
 	static function squareRoot($n) {
-		$margin    = sprintf('%.3f', .0001);
+		$margin    = sprintf('%.3f', .001);
 		$precision = strlen(strval("" . $margin)) - strrpos($margin, '.') - 1;
 		// anonymous helper functions
-		$midPoint  = function($a)    { return number_format((float) ($a/2), 0, '.', ''); };
-		$round     = function($a, $p){ return number_format((float) $a    , $p,'.', ''); };
-		$squared   = function($a)    { return ($a*$a);  };
+		$round     = function($a, $p){ return number_format((double) $a    , $p,'.', ''); };
+		$squared   = function($a)    { return ($a**2);  };
 		// usual suspects for binary search
 		$low       = $round(1, $precision);
-		$mid       = $midPoint($n);
+		$mid       = $round(($n/2), 0);
+		// deep copies
 		$high      = $round($n, $precision);
 		$value     = 0;
+		// print("when n = " . $n . "\n... low:  " . $low . "\n... mid:  " . $mid . "\n... high: " . $high . "\n");
 		while ($low <= $high) { 
-			$mid = $midPoint($low+$high);
+			$mid = $round(($low+$high)/2, 0);
 			if ($n === $squared($round($mid, 0))) { 
 				$value = $mid; 
 				break; 
