@@ -39,7 +39,7 @@ object Code {
 	// If you continue this process, the result will trend towards the golden ratio.
 	// BASIC RECURSIVE GOLDEN RATIO THEOREM
 	def goldenRatio(a:Double, b:Double) : Double = {
-		if ((a/b) == (a+b)/a) (a+b)/a else Code.goldenRatio((a+b), a);
+		if ((a/b) == (a+b)/a) (a+b)/a else goldenRatio((a+b), a);
 	}
 
 	// Give the nth Fibonacci number
@@ -51,7 +51,7 @@ object Code {
 			case 0 => previous
 			case _ => tail_recursion(n-1, current, ((previous+current) % 1000000))
 		}
-		tail_recursion((n % 1500000), 0, 1)
+		tail_recursion((n % 1500000), 0, 1);
 	}
 	
 	// Give the square root of a number
