@@ -54,7 +54,7 @@ class Code {
 	public static double SquareRoot(double n) {
 		double	  low = 1.0;
 		double	 high = n;
-		// REDUCED EPSILON FOR PASSING TEST EFFICIENTLY
+		// REDUCED EPSILON FOR EFFICIENCY
 		double rEpsilon = (EPSILON/100);
 		while(high-low >= 0) {
 			double mid = (low+high)/2;
