@@ -67,8 +67,8 @@ class Code {
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
 	static function squareRoot($n) {
-		$margin    = sprintf('%.3f', .001);
-		$precision = strlen(strval("" . $margin)) - strrpos($margin, '.') - 1;
+		$epsilon   = sprintf('%.5f', .00001);
+		$precision = strlen(strval("" . $epsilon)) - strrpos($epsilon, '.') - 1;
 		// anonymous helper functions
 		$round     = function($a, $p){ return number_format((double) $a    , $p,'.', ''); };
 		$squared   = function($a)    { return ($a*$a);  };
@@ -93,10 +93,10 @@ class Code {
 		}
 		// precision loop(s)
 		for ($i = 0; $i < $precision; $i++) { 
-			while(($n-$squared($value)) > $margin) { 
-				$value = $round(($value+$margin), $precision);
+			while(($n-$squared($value)) > $epsilon) { 
+				$value = $round(($value+$epsilon), $precision);
 			} 
-		} 
+		}
 		return $value; 
 	}
 }
