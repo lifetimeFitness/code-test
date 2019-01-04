@@ -6,17 +6,16 @@ object Code {
 
 	// Take a single-spaced <sentence>, and capitalize every <n> word starting with <offset>.
 	def capitalizeEveryNthWord(sentence:String, offset:Integer, n:Integer) : String = {
-		var delimiter     = " ";
-		var originalWords = sentence.split(delimiter);
-		var adjustedWords = new Array[String](originalWords.length);
-		for(i <- originalWords.indices){
-			val characters   = originalWords(i).toCharArray();
+		var delimiter = " ";
+		var words     = sentence.split(delimiter);
+		for(i <- words.indices){
+			val characters   = words(i).toCharArray();
 			if(i >= offset && i % n == 0){
 				characters(0) = Character.toUpperCase(characters(0));
 			}
-			adjustedWords(i) = new String(characters); 
+			words(i) = characters.mkString("");
 		}
-		adjustedWords.mkString(delimiter);
+		words.mkString(delimiter);
 	}
 	
 	// Determine if a number is prime
