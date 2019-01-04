@@ -44,7 +44,7 @@ public class Code {
 	// Starting with 1 and 1, a Fibonacci number is the sum of the previous two.
 	// J.P.M. BINET'S FORMULA (1843)
 	public static Integer fibonacci(Integer n) {
-		Double rootFive = Math.pow(5, .5);
+		double rootFive = Math.pow(5, .5);
 		double jpmBinet = Math.pow((1+rootFive)/2, n)-Math.pow((1-rootFive)/2, n);
 		return (int)((1/rootFive)*(jpmBinet));
 	}
@@ -54,10 +54,10 @@ public class Code {
 	// Do not use the built-in square root function.
 	// MODIFIED TEXTBOOK BINARY SEARCH W/ HARD CODED NUMBERS
 	public static Double squareRoot(Double n) {
-		Double      low = 1.0;
-		Double     high = n;
+		double      low = 1.0;
+		double     high = n;
 		// REDUCED EPSILON FOR PASSING TEST EFFICIENTLY
-		Double rEpsilon = (EPSILON/100);
+		double rEpsilon = (EPSILON/100);
 		while(high-low >= 0) {
 			Double mid = (low+high)/2;
 			if ((mid*mid)-n > 0){
