@@ -13,9 +13,10 @@ var code = {
 				words[i] = titleWord(words[i]);	
 			}
 		}
-		return words.join(" ");
+		return words.join(" ");	},
 		
 	},
+	
 	// Determine if a number is prime
 	isPrime: function(n) {
 		// quick evaluation of the truth tucked into a boolean
@@ -61,13 +62,21 @@ var code = {
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
 	// Also not using return Math.pow(x, .5) or its equivalent x**.5
+	// ALMOST TEXTBOOK BINARY SEARCH W/ SOME HARD CODED NUMBERS
 	squareRoot: function(n) {
-		let  start = n;
-		let margin = 0.001;
-		while((start - n/start) > margin){
-			start = (start + (n/start))/2;
+		let low = 1.0;
+		let high = n;
+		let margin = .0001;
+		while(high-low >= 0) {
+			let mid = (low+high)/2;
+			if ((mid*mid)-n > 0){
+				high = (mid-margin);
+			}
+			else{
+				low  = (mid+margin);
+			}
 		}
-		return +(start.toFixed(3));
+		return Math.round(high * (1/margin)) / (1/margin);
 	}
 };
 module.exports = code;
