@@ -73,12 +73,10 @@ class Code {
 		$round     = function($a, $p){ return number_format((double) $a    , $p,'.', ''); };
 		$squared   = function($a)    { return ($a*$a);  };
 		// usual suspects for binary search
-		$low       = $round(1, $precision);
+		$low       = 1;
 		$mid       = $round(($n/2), 0);
-		// deep copies
-		$high      = $round($n, $precision);
+		$high      = $n;
 		$value     = 0;
-		// print("when n = " . $n . "\n... low:  " . $low . "\n... mid:  " . $mid . "\n... high: " . $high . "\n");
 		while ($low <= $high) { 
 			$mid = $round(($low+$high)/2, 0);
 			if ($n === $squared($round($mid, 0))) { 
@@ -95,8 +93,8 @@ class Code {
 		}
 		// precision loop(s)
 		for ($i = 0; $i < $precision; $i++) { 
-			while($n-$squared($value) > $margin) { 
-				$value = $round($value+$margin, $precision);
+			while(($n-$squared($value)) > $margin) { 
+				$value = $round(($value+$margin), $precision);
 			} 
 		} 
 		return $value; 
