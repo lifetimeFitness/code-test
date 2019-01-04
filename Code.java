@@ -8,7 +8,7 @@ public class Code {
 	// Take a single-spaced <sentence>, and capitalize every <n> word starting with <offset>.
 	// STANDARD ALGORITHM W/ TERNARY OPERATOR
 	public static String capitalizeEveryNthWord(String sentence, Integer offset, Integer n) {
-	    String  delimiter = " ";
+		String  delimiter = " ";
 		String[]    words = sentence.split(delimiter);
 		for(int i = 0; i < words.length; ++i){
 			words[i] = (i % n == 0 && i >= offset) ? (words[i].substring(0, 1).toUpperCase() + words[i].substring(1, words[i].length())): words[i];
@@ -21,7 +21,7 @@ public class Code {
 	public static Boolean isPrime(Integer n) {
 		boolean prime = n > 1 || n == 2;
 		for (int i = 2; i <= n / 2; ++i){
-			if (n % i == 0) {
+		    if (n % i == 0) {
 				prime = false;
 				break;
 			}  
@@ -54,10 +54,10 @@ public class Code {
 	// Do not use the built-in square root function.
 	// MODIFIED TEXTBOOK BINARY SEARCH W/ HARD CODED NUMBERS
 	public static Double squareRoot(Double n) {
-		double      low = 1.0;
-		double     high = n;
+		Double      low = 1.0;
+		Double     high = n;
 		// REDUCED EPSILON FOR PASSING TEST EFFICIENTLY
-		double rEpsilon = (EPSILON/100);
+		Double rEpsilon = (EPSILON/100);
 		while(high-low >= 0) {
 			Double mid = (low+high)/2;
 			if ((mid*mid)-n > 0){
