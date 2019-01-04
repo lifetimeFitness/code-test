@@ -10,7 +10,7 @@ class Code {
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
 	public static string CapitalizeEveryNthWord(string sentence, int offset, int n) {
 		string  delimiter = " ";
-		string[]    words = sentence.Split(delimiter);
+		string[]	words = sentence.Split(delimiter);
 		for(int i = 0; i < words.Length; ++i){
 			words[i] = (i % n == 0 && i >= offset) ? (words[i].Substring(0, 1).ToUpper() + words[i].Substring(1, words[i].Length-1)): words[i];
 		}
@@ -44,8 +44,8 @@ class Code {
 	// Starting with 0, 1, 1, 2, ... a Fibonacci number is the sum of the previous two.
 	// "VARIATION OF" J.P.M. BINET'S FORMULA (1843)
 	public static int Fibonacci(int n) {
-		double phi = GoldenRatio(n, n-1);
-		return Convert.ToInt32(Math.Round((Math.Pow(phi, n) - Math.Pow(-phi, -n)) / SquareRoot(5)));
+				double phi = GoldenRatio(n, n-1);
+				return Convert.ToInt32(Math.Round((Math.Pow(phi, n) - Math.Pow(-phi, -n)) / SquareRoot(5)));
 	}
 	
 	// Give the square root of a number
@@ -54,17 +54,15 @@ class Code {
 	public static double SquareRoot(double n) {
 		double	  low = 1.0;
 		double	 high = n;
-		// REDUCED EPSILON FOR EFFICIENCY
-		double rEpsilon = (EPSILON/100);
 		while(high-low >= 0) {
 			double mid = (low+high)/2;
 			if ((mid*mid)-n > 0){
-				high = (mid-rEpsilon);
+				high = (mid-EPSILON);
 			}
 			else{
-				low  = (mid+rEpsilon);
+				low  = (mid+EPSILON);
 			}
 		}
-		return Math.Round(high * 1000d) / 1000d;
+		return Math.Round(high * 10000d) / 10000d;
 	}
 }
