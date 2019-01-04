@@ -71,7 +71,7 @@ class Code {
 		$precision = strlen(strval("" . $margin)) - strrpos($margin, '.') - 1;
 		// anonymous helper functions
 		$round     = function($a, $p){ return number_format((double) $a    , $p,'.', ''); };
-		$squared   = function($a)    { return ($a**2);  };
+		$squared   = function($a)    { return ($a*$a);  };
 		// usual suspects for binary search
 		$low       = $round(1, $precision);
 		$mid       = $round(($n/2), 0);
