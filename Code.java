@@ -37,14 +37,14 @@ public class Code {
 	// If you continue this process, the result will trend towards the golden ratio.
 	// BASIC RECURSIVE GOLDEN RATIO THEOREM
 	public static Double goldenRatio(Double a, Double b) {
-		return ((a/b) == (a+b)/a) ? (a+b)/a: Code.goldenRatio((a+b), a);
+		return ((a/b) == ((a+b)/a)) ? ((a+b)/a): Code.goldenRatio((a+b), a);
 	}
 
 	// Give the nth Fibonacci number
 	// Starting with 1 and 1, a Fibonacci number is the sum of the previous two.
 	// J.P.M. BINET'S FORMULA (1843)
 	public static Integer fibonacci(Integer n) {
-		double rootFive = Math.pow(5, .5);
+		double rootFive = Math.pow(5,.5);
 		double jpmBinet = Math.pow((1+rootFive)/2, n)-Math.pow((1-rootFive)/2, n);
 		return (int)((1/rootFive)*(jpmBinet));
 	}
@@ -56,17 +56,15 @@ public class Code {
 	public static Double squareRoot(Double n) {
 		double      low = 1.0;
 		double     high = n;
-		// REDUCED EPSILON FOR PASSING TEST EFFICIENTLY
-		double rEpsilon = (EPSILON/100);
 		while(high-low >= 0) {
 			double mid = (low+high)/2;
 			if ((mid*mid)-n > 0){
-				high = (mid-rEpsilon);
+				high = (mid-EPSILON);
 			}
 			else{
-				low  = (mid+rEpsilon);
+				low  = (mid+EPSILON);
 			}
 		}
-		return Math.round(high * 1000d) / 1000d;
+		return Math.round(high * 10000d) / 10000d;
 	}
 }
