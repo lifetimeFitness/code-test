@@ -7,3 +7,4 @@
 ### Non-Required Edits
 - tests.php array searching
 - Tests.java "fibionacci" to "fibonacci"
+- test.sh for proper enumeration
