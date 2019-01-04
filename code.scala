@@ -1,4 +1,6 @@
 object Code {
+	val EPSILON = .00001;
+
 	// Returns "Hello World!"
 	def helloWorld() : String = {
 		"Hello World!";
@@ -7,7 +9,7 @@ object Code {
 	// Take a single-spaced <sentence>, and capitalize every <n> word starting with <offset>.
 	def capitalizeEveryNthWord(sentence:String, offset:Integer, n:Integer) : String = {
 		var delimiter = " ";
-		var words     = sentence.split(delimiter);
+	    var words     = sentence.split(delimiter);
 		for(i <- words.indices){
 			val characters   = words(i).toCharArray();
 			if(i >= offset && i % n == 0){
@@ -47,7 +49,7 @@ object Code {
 	// "TAIL CALL" RECURSION (ACM CONFERENCE, STEELE 1977)
 	//  CALCULATES "PISANO PERIOD" (WALL 1960), (WRENCH 1969)
 	def fibonacci(n:Integer) : Integer = {
-		def tail_recursion(n:Int, previous:Int, current:Int): Int = n match {
+	    def tail_recursion(n:Int, previous:Int, current:Int): Int = n match {
 			case 0 => previous
 			case _ => tail_recursion(n-1, current, ((previous+current) % 1000000))
 		}
@@ -57,21 +59,20 @@ object Code {
 	// Give the square root of a number
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
-	// TEXTBOOK BINARY SEARCH
+	// "ALMOST" TEXTBOOK BINARY SEARCH
 	def squareRoot(n: Double): Double = {
 		var       low: Double = 1.0;
 		var      high: Double = n;
-		var   epsilon: Double = .0001;
 		while(high-low >= 0) {
 			var mid = (low+high)/2;
-			if (mid*mid-n > 0){
-				high = mid-epsilon;
+			if (((mid*mid)-n) > 0){
+				high = mid-EPSILON;
 			}
 			else{
-				low  = mid+epsilon;
+				low  = mid+EPSILON;
 			}
 		}
-		(high * 1000).round / 1000.toDouble;
+		(high * 10000).round / 10000.toDouble;
 	}
 
 }
