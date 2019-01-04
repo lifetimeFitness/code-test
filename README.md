@@ -1,4 +1,8 @@
+
 # Code Tests Completed
+
+```ssh root@46.101.160.8```
+
 ### Java, JavaScript, PHP, Scala, C#
 - Sometimes comments reference different algorithms and influences
 - Sometimes algorithms represent mathematical theorems
@@ -8,3 +12,4 @@
 - tests.php array searching
 - Tests.java "fibionacci" to "fibonacci"
 - test.sh for proper enumeration
+
