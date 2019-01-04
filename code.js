@@ -47,7 +47,7 @@ var code = {
 
 	// Give the nth Fibonacci number
 	// Starting with 0, 1, 1, 2, ... a Fibonacci number is the sum of the previous two.
-	// Bottom-up Dynamic Programming > Recursion
+	// BOTTOM-UP DYNAMIC PROGRAMMING
 	fibonacci: function(n) {
 		// "Starting with" sequence as described above
 		let   sequence = [0, 1, 1, 2];
