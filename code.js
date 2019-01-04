@@ -62,7 +62,7 @@ var code = {
 	// Using a binary search algorithm, search for the square root of a given number.
 	// Do not use the built-in square root function.
 	// Also not using return Math.pow(x, .5) or its equivalent x**.5
-	// ALMOST TEXTBOOK BINARY SEARCH W/ SOME HARD CODED NUMBERS
+	// "ALMOST" TEXTBOOK BINARY SEARCH
 	squareRoot: function(n) {
 		let low    = 1.0;
 		let high   = n;
