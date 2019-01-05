@@ -6,12 +6,14 @@ public class Code {
 	}
 
 	// Take a single-spaced <sentence>, and capitalize every <n> word starting with <offset>.
-	// STANDARD ALGORITHM W/ TERNARY OPERATOR
+	// STANDARD ALGORITHM
 	public static String capitalizeEveryNthWord(String sentence, Integer offset, Integer n) {
 		String  delimiter = " ";
 		String[]    words = sentence.split(delimiter);
 		for(int i = 0; i < words.length; ++i){
-			words[i] = (i % n == 0 && i >= offset) ? (words[i].substring(0, 1).toUpperCase() + words[i].substring(1, words[i].length())): words[i];
+			words[i] = (i % n == 0 && i >= offset) ? 
+				   (words[i].substring(0, 1).toUpperCase() + words[i].substring(1, words[i].length())):
+			            words[i];
 		}
 		return String.join(delimiter, words);
 	}
