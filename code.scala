@@ -11,7 +11,7 @@ object Code {
 		var delimiter: String = " ";
 		var     words: Array[String] = sentence.split(delimiter);
 		for(i <- words.indices){
-			val characters: Array[Char] = words(i).toCharArray();
+			var characters: Array[Char] = words(i).toCharArray();
 			if(i >= offset && i % n == 0){
 				characters(0) = Character.toUpperCase(characters(0));
 			}
