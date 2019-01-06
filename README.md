@@ -13,6 +13,7 @@
 - tests.php array searching
 - Tests.java "fibionacci" to "fibonacci"
 - test.sh for proper enumeration
+- added line ending to main.php
 
 ### Server Information
 
@@ -25,7 +26,7 @@ Release:        18.10
 Codename:       cosmic
 ```
 
-## Software Versions
+### Software Versions
 
 - PHP 7.2.10
 - Java 1.8.0_191
