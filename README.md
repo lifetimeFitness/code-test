@@ -5,7 +5,7 @@
 - Sometimes comments reference different algorithms and influences
 - Sometimes algorithms represent mathematical theorems
 
-![](https://pasteboard.co/HVg7jMq.png)
+![](https://www196.lunapic.com/do-not-link-here-use-hosting-instead/154681841432604291?8531638058)
 
 
 
