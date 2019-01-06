@@ -13,7 +13,7 @@ function Program() {
     }
     
     function main() {
-        echo("\nPHP Tests:");
+        echo("\nPHP Tests:\n");
         $r = new ReflectionClass('Tests');
         $names = array_map(function($x) {
             return $x->name;
