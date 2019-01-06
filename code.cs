@@ -44,8 +44,8 @@ class Code {
 	// Starting with 0, 1, 1, 2, ... a Fibonacci number is the sum of the previous two.
 	// "VARIATION OF" J.P.M. BINET'S FORMULA (1843)
 	public static int Fibonacci(int n) {
-				double phi = GoldenRatio(n, n-1);
-				return Convert.ToInt32(Math.Round((Math.Pow(phi, n) - Math.Pow(-phi, -n)) / SquareRoot(5)));
+		double phi = GoldenRatio(n, n-1);
+		return Convert.ToInt32(Math.Round((Math.Pow(phi, n) - Math.Pow(-phi, -n)) / SquareRoot(5)));
 	}
 	
 	// Give the square root of a number
