@@ -93,8 +93,8 @@ class Code {
 		}
 		// precision loop(s)
 		for ($i = 0; $i < $precision; $i++) { 
-			while(($n-$squared($value)) > $epsilon) { 
-				$value = $round(($value+$epsilon), $precision);
+			while(($n-$squared($value)) > doubleval($epsilon)) { 
+				$value = $round(($value+doubleval($epsilon)), $precision);
 			} 
 		}
 		return $value; 
