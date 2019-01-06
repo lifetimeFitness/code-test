@@ -15,10 +15,12 @@
 
 ```ssh root@46.101.160.8```
 
-```Distributor ID: Ubuntu
+```
+Distributor ID: Ubuntu
 Description:    Ubuntu 18.10
 Release:        18.10
-Codename:       cosmic```
+Codename:       cosmic
+```
 
 ## Software Versions
 
