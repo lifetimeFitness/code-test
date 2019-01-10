@@ -9,12 +9,12 @@ class Code {
 
 	// Take a single-spaced <sentence>, and capitalize every <n>th word starting with <offset>.
 	public static string CapitalizeEveryNthWord(string sentence, int offset, int n) {
-		string  delimiter = " ";
+		char    delimiter = ' ';
 		string[]    words = sentence.Split(delimiter);
 		for(int i = 0; i < words.Length; ++i){
 			words[i] = (i % n == 0 && i >= offset) ? (words[i].Substring(0, 1).ToUpper() + words[i].Substring(1, words[i].Length-1)): words[i];
 		}
-		return string.Join(delimiter, words);
+		return string.Join(delimiter.ToString(), words);
 	}
 	
 	// Determine if a number is prime
