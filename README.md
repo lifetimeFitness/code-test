@@ -17,7 +17,7 @@
 
 ### Server Information
 
-```ssh root@142.93.162.20```
+```ssh root@142.93.61.6```
 
 ```
 Distributor ID: Ubuntu
