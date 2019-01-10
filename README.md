@@ -1,7 +1,7 @@
 
 # Code Tests Completed
 
-### Java, JavaScript, PHP, Scala, C#
+### C#, Scala, Javascript, Java PHP
 - Sometimes comments reference different algorithms and influences
 - Sometimes algorithms represent mathematical theorems
 
@@ -28,9 +28,11 @@ Codename:       cosmic
 
 ### Software Versions
 
-- PHP 7.2.10
-- Java 1.8.0_191
+- C#6 (Mono 4.2.1)
 - Scala 2.12.6
-- C# 2.8.2.62916 (2ad4aabc)
+- Javascript 2015+/ES6+
+- Java 1.8.0_191
+- PHP 7.2.10
+
 
 
